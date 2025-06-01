@@ -1,23 +1,95 @@
-  body, html {
-      margin: 0;
-      padding: 0;
-    }
-    .hero-header {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .hero-header img {
-      width: 100%;
-      height: 100%;
-      max-height: 80%;
-      object-fit: cover;
-      object-position: left;
-      display: block;
-    }
-    /* Opcional: para que el resto del contenido empiece después del header */
-    section {
+.hero-header {
+  position: relative;
+  width: 100vw;
+  height: 70vh; /* o el alto que quieras para la hero */
+  background-image: url('assets/Oriana\ \(3\).png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente el contenido */
+  align-items: center;     /* centra horizontalmente */
+  text-align: center;
+  color: rgb(231, 10, 220);
+}
+.header-title {
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  pointer-events: none;
+  margin: 0;
+}
+
+    /* section {
       min-height: 100vh;
       background: #fff;
-    }
+    } */
+    
+/*CUENTA REGRESIVA*/
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;             /* Todas en una línea */
+  gap: 1rem;
+  overflow: hidden;              /* Oculta cualquier scroll */
+  max-width: 100%;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+
+.countdown-card {
+  min-width: 150px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  /* border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+  /* background-color:#fdcae1; color de fondo */
+  color: #4a4a4a;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.countdown-card:hover {
+  transform: scale(1.05);
+}
+
+.countdown-card span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.countdown-card span {
+  font-size: 2.5rem; /* tamaño base para pantallas grandes */
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .countdown-card {
+    min-width: 100px;       /* Cards un poco más anchas */
+    padding: 0.8rem 0.5rem;   /* Más padding para que se vean más grandes */
+    margin: 0 0.1rem;       /* Menos espacio horizontal entre cards */
+  }
+
+  .countdown-card span {
+    font-size: 1.2rem;      /* Números un poco más grandes */
+  }
+
+  .countdown-card .label {
+    font-size: 0.85rem;     /* Etiquetas un poco más grandes */
+  }
+
+  /* Si usas flexbox en el contenedor, controla el gap así: */
+  #countdown {
+    gap: 0.8rem;            /* Reduce el espacio entre cards */
+  }
+}
+
