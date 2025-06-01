@@ -1,7 +1,7 @@
 .hero-header {
   position: relative;
   width: 100vw;
-  height: 70vh; /* o el alto que quieras para la hero */
+  height: 90vh; /* o el alto que quieras para la hero */
   background-image: url('assets/Oriana\ \(3\).png');
   background-size: contain;
   background-position: center center;
